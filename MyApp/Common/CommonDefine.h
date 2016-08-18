@@ -13,7 +13,7 @@
 #define DLOG(...) NSLog(__VA_ARGS__)
 #endif
 
-#define DEFAULT_BASE_API_URL_STRING @"http://wx.vchetong.com/index.php"
+#define DEFAULT_BASE_API_URL_STRING @"http://wx.vchetong.com"
 
 // 获得屏幕的参数
 #define MAIN_SCREEN_FRAME   [[UIScreen mainScreen] bounds]              //!< 屏幕的Frame

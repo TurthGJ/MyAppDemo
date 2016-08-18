@@ -28,7 +28,7 @@
     UIView* view = [CommonFunction getConrnerRadiusUIView:30 orgion:CGPointMake(100, 300) size:CGSizeMake(200, 200)];
     view.backgroundColor = [UIColor redColor];
     
-    [[AFHttpNetHelperAPIClient shareManager]POSTRequest:@"http://wx.vchetong.com/index.php/Home/Yungou/getShopPeriod" parameters:nil success:^(id data){
+    [[AFHttpNetHelperAPIClient shareManager]POSTRequest:@"/index.php/Home/Yungou/getShopPeriod" parameters:nil success:^(id data){
         NSLog(@"%@",data);
     }failure:^(NSError *error){
         NSLog(@"%@",error.domain);
