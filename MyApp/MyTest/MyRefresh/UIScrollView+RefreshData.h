@@ -12,7 +12,7 @@
 
 @interface UIScrollView (RefreshData)
 
-@property (nonatomic, strong) MyViewComponent* headView;
-@property (nonatomic, strong) MyViewComponent* footView;
+@property (nonatomic, strong) MyHeaderView* headView;
+@property (nonatomic, strong) MyHeaderView* footView;
 
 @end

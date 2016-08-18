@@ -15,23 +15,23 @@ static const char RefreshHeaderKey = '\0';
 static const char RefreshFooterKey = '\0';
 
 
-- (void)setHeadView:(MyViewComponent *)headView
+- (void)setHeadView:(MyHeaderView *)headView
 {
     if (headView != self.headView) {
         [self.headView removeFromSuperview];
         
         [self insertSubview:headView atIndex:0];
         
-        objc_setAssociatedObject(self, &RefreshHeaderKey, headView, OBJC_ASSOCIATION_RETAIN);
+        objc_setAssociatedObject(self, &RefreshHeaderKey, headView, OBJC_ASSOCIATION_ASSIGN);
     }
 }
 
-- (MyViewComponent*)headView
+- (MyHeaderView*)headView
 {
     return objc_getAssociatedObject(self, &RefreshHeaderKey);
 }
 
-- (void)setFootView:(UIView *)footView
+- (void)setFootView:(MyHeaderView *)footView
 {
     if (footView != self.footView) {
         [self.footView removeFromSuperview];
@@ -43,5 +43,6 @@ static const char RefreshFooterKey = '\0';
 {
     return objc_getAssociatedObject(self, &RefreshFooterKey);
 }
+
 
 @end

@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MyViewComponent.h"
+#import "MyRefreshConst.h"
 
 @interface MyHeaderView : MyViewComponent
 
 //@property (nonatomic, retain)UILabel* textLab;
 
-+ (instancetype)initHeaderView;
++ (instancetype)initHeaderView:(id)target action:(SEL)action;
 
 @end

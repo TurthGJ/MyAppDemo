@@ -63,6 +63,16 @@ typedef NS_ENUM(NSInteger, ErrorType) {
 + (CGSize)countStringLength:(NSString *)iString
                    FontSize:(CGFloat)iFontSize;
 
+
+/**
+ *  根据图片data判断图片类型
+ *
+ *  @param data
+ *
+ *  @return
+ */
++ (NSString*)contentTypeForImageData:(NSData*)data;
+
 /**
  定义计算k阶乘的函数fac()
  
@@ -125,6 +135,38 @@ typedef NS_ENUM(NSInteger, ErrorType) {
 + (UIImage *)getGrayImageWithName:(NSString *)imageName;
 
 
+/**
+ *  高效图片圆型处理
+ *
+ *  @param img
+ *
+ *  @return
+ */
++ (UIImage *)cutCircleImage:(UIImage*)img;
+
+
+/**
+ *  高效图片圆角处理
+ *
+ *  @param img
+ *  @param radius 角度
+ *
+ *  @return
+ */
++ (UIImage*)getCornerradiusImage:(UIImage*)img radius:(CGFloat)radius;
+
+
+/**
+ *  高效UIView处理
+ *
+ *  @param view
+ *  @param radius
+ *  @param orgion
+ *  @param size
+ *
+ *  @return
+ */
++ (UIView*)getConrnerRadiusUIView:(CGFloat)radius orgion:(CGPoint)orgion size:(CGSize)size;
 
 #pragma mark -
 #pragma mark 动画

@@ -15,6 +15,12 @@
 		2706BF021D337907003977CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2706BF001D337907003977CA /* LaunchScreen.storyboard */; };
 		2706BF0D1D337907003977CA /* MyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF0C1D337907003977CA /* MyAppTests.m */; };
 		2706BF181D337907003977CA /* MyAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2706BF171D337907003977CA /* MyAppUITests.m */; };
+		2710DB341D62FA25005750CF /* CDEchoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2710DB331D62FA25005750CF /* CDEchoClient.m */; };
+		2710DB371D62FD17005750CF /* SocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2710DB361D62FD17005750CF /* SocketViewController.m */; };
+		27150D1D1D64310B006142B3 /* 公司版_订单统计1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27150D1C1D64310B006142B3 /* 公司版_订单统计1.png */; };
+		27150D231D6549EC006142B3 /* AFHttpNetHelperAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 27150D221D6549EC006142B3 /* AFHttpNetHelperAPIClient.m */; };
+		2725EE6C1D5DAE550046CCED /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2725EE6B1D5DAE550046CCED /* UIView+Extension.m */; };
+		2769C1551D61D487001013A6 /* UIScrollView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2769C1541D61D487001013A6 /* UIScrollView+Extension.m */; };
 		276F7B411D59AFFC0059CF93 /* CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 276F7B401D59AFFC0059CF93 /* CommonFunction.m */; };
 		276F7B851D59B9810059CF93 /* NSArray+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 276F7B451D59B9810059CF93 /* NSArray+Check.m */; };
 		276F7B861D59B9810059CF93 /* NSData+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 276F7B481D59B9810059CF93 /* NSData+Check.m */; };
@@ -85,6 +91,18 @@
 		2706BF171D337907003977CA /* MyAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAppUITests.m; sourceTree = "<group>"; };
 		2706BF191D337907003977CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2706BF291D337A77003977CA /* CommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
+		2710DB321D62FA25005750CF /* CDEchoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDEchoClient.h; sourceTree = "<group>"; };
+		2710DB331D62FA25005750CF /* CDEchoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDEchoClient.m; sourceTree = "<group>"; };
+		2710DB351D62FD17005750CF /* SocketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketViewController.h; sourceTree = "<group>"; };
+		2710DB361D62FD17005750CF /* SocketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketViewController.m; sourceTree = "<group>"; };
+		27150D1C1D64310B006142B3 /* 公司版_订单统计1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "公司版_订单统计1.png"; sourceTree = "<group>"; };
+		27150D211D6549EC006142B3 /* AFHttpNetHelperAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHttpNetHelperAPIClient.h; sourceTree = "<group>"; };
+		27150D221D6549EC006142B3 /* AFHttpNetHelperAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHttpNetHelperAPIClient.m; sourceTree = "<group>"; };
+		2725EE691D5C52740046CCED /* MyRefreshConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRefreshConst.h; sourceTree = "<group>"; };
+		2725EE6A1D5DAE550046CCED /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		2725EE6B1D5DAE550046CCED /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		2769C1531D61D487001013A6 /* UIScrollView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Extension.h"; sourceTree = "<group>"; };
+		2769C1541D61D487001013A6 /* UIScrollView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Extension.m"; sourceTree = "<group>"; };
 		276F7B3F1D59AFFC0059CF93 /* CommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFunction.h; sourceTree = "<group>"; };
 		276F7B401D59AFFC0059CF93 /* CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFunction.m; sourceTree = "<group>"; };
 		276F7B441D59B9810059CF93 /* NSArray+Check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Check.h"; sourceTree = "<group>"; };
@@ -200,12 +218,15 @@
 		2706BEF11D337907003977CA /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
+				27150D1C1D64310B006142B3 /* 公司版_订单统计1.png */,
 				279B44CB1D45FED500BBE1EF /* MyTest */,
 				2706BF251D337A04003977CA /* Common */,
 				2706BEF51D337907003977CA /* AppDelegate.h */,
 				2706BEF61D337907003977CA /* AppDelegate.m */,
 				2706BEF81D337907003977CA /* ViewController.h */,
 				2706BEF91D337907003977CA /* ViewController.m */,
+				2710DB351D62FD17005750CF /* SocketViewController.h */,
+				2710DB361D62FD17005750CF /* SocketViewController.m */,
 				2706BEFB1D337907003977CA /* Main.storyboard */,
 				2706BEFE1D337907003977CA /* Assets.xcassets */,
 				2706BF001D337907003977CA /* LaunchScreen.storyboard */,
@@ -244,11 +265,30 @@
 		2706BF251D337A04003977CA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				27150D201D654992006142B3 /* HttpMangerHelper */,
 				2706BF291D337A77003977CA /* CommonDefine.h */,
 				276F7B3F1D59AFFC0059CF93 /* CommonFunction.h */,
 				276F7B401D59AFFC0059CF93 /* CommonFunction.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		2710DB311D62F9FC005750CF /* EchoSocket */ = {
+			isa = PBXGroup;
+			children = (
+				2710DB321D62FA25005750CF /* CDEchoClient.h */,
+				2710DB331D62FA25005750CF /* CDEchoClient.m */,
+			);
+			path = EchoSocket;
+			sourceTree = "<group>";
+		};
+		27150D201D654992006142B3 /* HttpMangerHelper */ = {
+			isa = PBXGroup;
+			children = (
+				27150D211D6549EC006142B3 /* AFHttpNetHelperAPIClient.h */,
+				27150D221D6549EC006142B3 /* AFHttpNetHelperAPIClient.m */,
+			);
+			path = HttpMangerHelper;
 			sourceTree = "<group>";
 		};
 		276F7B421D59B9810059CF93 /* Categories */ = {
@@ -424,6 +464,11 @@
 				276F7BA41D5AFD7C0059CF93 /* MyHeaderView.m */,
 				276F7BA61D5B01240059CF93 /* MyViewComponent.h */,
 				276F7BA71D5B01240059CF93 /* MyViewComponent.m */,
+				2725EE691D5C52740046CCED /* MyRefreshConst.h */,
+				2725EE6A1D5DAE550046CCED /* UIView+Extension.h */,
+				2725EE6B1D5DAE550046CCED /* UIView+Extension.m */,
+				2769C1531D61D487001013A6 /* UIScrollView+Extension.h */,
+				2769C1541D61D487001013A6 /* UIScrollView+Extension.m */,
 			);
 			path = MyRefresh;
 			sourceTree = "<group>";
@@ -431,6 +476,7 @@
 		279B44CB1D45FED500BBE1EF /* MyTest */ = {
 			isa = PBXGroup;
 			children = (
+				2710DB311D62F9FC005750CF /* EchoSocket */,
 				276F7B9F1D5AE0EC0059CF93 /* MyRefresh */,
 				276F7B421D59B9810059CF93 /* Categories */,
 			);
@@ -563,6 +609,7 @@
 				2706BF021D337907003977CA /* LaunchScreen.storyboard in Resources */,
 				2706BEFF1D337907003977CA /* Assets.xcassets in Resources */,
 				2706BEFD1D337907003977CA /* Main.storyboard in Resources */,
+				27150D1D1D64310B006142B3 /* 公司版_订单统计1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,26 +684,31 @@
 			files = (
 				276F7B871D59B9810059CF93 /* NSData+Extend.m in Sources */,
 				276F7B8C1D59B9810059CF93 /* NSObject+Check.m in Sources */,
+				2710DB341D62FA25005750CF /* CDEchoClient.m in Sources */,
 				2706BEFA1D337907003977CA /* ViewController.m in Sources */,
 				276F7B931D59B9810059CF93 /* UIButton+WebImage.m in Sources */,
 				2706BEF71D337907003977CA /* AppDelegate.m in Sources */,
 				276F7B9A1D59B9810059CF93 /* UIImageView+WebImage.m in Sources */,
 				276F7B881D59B9810059CF93 /* NSDate+Utils.m in Sources */,
 				276F7B9D1D59B9810059CF93 /* UIView+Shape.m in Sources */,
+				2769C1551D61D487001013A6 /* UIScrollView+Extension.m in Sources */,
 				276F7B941D59B9810059CF93 /* UIColor+Conver.m in Sources */,
 				276F7B8D1D59B9810059CF93 /* NSObject+propertyList.m in Sources */,
 				276F7BA81D5B01240059CF93 /* MyViewComponent.m in Sources */,
 				276F7B961D59B9810059CF93 /* UIImage+Check.m in Sources */,
+				27150D231D6549EC006142B3 /* AFHttpNetHelperAPIClient.m in Sources */,
 				276F7B861D59B9810059CF93 /* NSData+Check.m in Sources */,
 				276F7B9E1D59B9810059CF93 /* UIView+YYAdd.m in Sources */,
 				276F7B901D59B9810059CF93 /* NSString+Format.m in Sources */,
 				276F7B851D59B9810059CF93 /* NSArray+Check.m in Sources */,
 				276F7B971D59B9810059CF93 /* UIImage+Compress.m in Sources */,
 				276F7B8F1D59B9810059CF93 /* NSString+Dictionary.m in Sources */,
+				2710DB371D62FD17005750CF /* SocketViewController.m in Sources */,
 				276F7B8E1D59B9810059CF93 /* NSString+Check.m in Sources */,
 				276F7B911D59B9810059CF93 /* NSString+MD5.m in Sources */,
 				276F7BA51D5AFD7C0059CF93 /* MyHeaderView.m in Sources */,
 				276F7B891D59B9810059CF93 /* NSDictionary+Check.m in Sources */,
+				2725EE6C1D5DAE550046CCED /* UIView+Extension.m in Sources */,
 				276F7BA21D5AE0EC0059CF93 /* UIScrollView+RefreshData.m in Sources */,
 				276F7B921D59B9810059CF93 /* NSString+RichText.m in Sources */,
 				276F7B8A1D59B9810059CF93 /* NSDictionary+String.m in Sources */,

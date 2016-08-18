@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Common/CommonDefine.h"
+#import "Common/CommonFunction.h"
 #import "UIScrollView+RefreshData.h"
 #import "MyHeaderView.h"
 
@@ -23,15 +24,33 @@
     self.itemTableView.delegate = self;
     self.itemTableView.dataSource = self;
     
-    self.itemTableView.headView = [MyHeaderView initHeaderView];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    self.itemTableView.headView = [MyHeaderView initHeaderView:self action:@selector(loadData)];
+//
+    
+    NSString* path = @"http://s18.postimg.org/riusuxiix/Nsdata.jpg";
+    NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:path]];
+    
+    NSString* type = [CommonFunction contentTypeForImageData:data];
+    
     
     UILabel* label = [[UILabel alloc]init];
     label.text = @"refresh";
     label.font = [UIFont systemFontOfSize:16];
     label.textColor = [UIColor whiteColor];
     label.frame = CGRectMake(0, 0, MAIN_SCREEN_WIDTH, 50);
-
+    
     [self.itemTableView.headView addSubview:label];
+}
+
+- (void)loadData
+{
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

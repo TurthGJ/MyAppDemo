@@ -151,6 +151,38 @@
     return actualsize;
 }
 
+
++ (NSString*)contentTypeForImageData:(NSData*)data
+{
+    uint8_t c;
+    [data getBytes:&c length:1];
+    switch (c) {
+        case 0xFF:
+            return @"jpeg";
+            break;
+        case 0x89:
+            return @"png";
+            break;
+        case 0x47:
+            return @"gif";
+            break;
+        case 0x49:
+        case 0x4D:
+            return @"tiff";
+            break;
+        case 0x52:
+            if ([data length] < 1) {
+                return nil;
+            }
+            NSString* string = [[NSString alloc]initWithData:[data subdataWithRange:NSMakeRange(0, 12)] encoding:NSASCIIStringEncoding];
+            if ([string hasPrefix:@"RIFF"]&&[string hasSuffix:@"WEBP"]) {
+                return @"webp";
+            }
+            return nil;
+    }
+    return nil;
+}
+
 /*
  + (NSInteger)fac:(NSInteger)k
  {
@@ -542,6 +574,57 @@
     }
     
     return [NSDictionary dictionaryWithDictionary:pairs];
+}
+
++ (UIImage *)cutCircleImage:(UIImage*)img{
+    UIGraphicsBeginImageContextWithOptions(img.size, NO, 0.0);    // 获取上下文
+    CGContextRef ctr = UIGraphicsGetCurrentContext();    // 设置圆形
+    CGRect rect = CGRectMake(0, 0, img.size.width, img.size.height);
+    CGContextAddEllipseInRect(ctr, rect);    // 裁剪
+    CGContextClip(ctr);    // 将图片画上去
+    [img drawInRect:rect];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+
++ (UIImage*)getCornerradiusImage:(UIImage*)img radius:(CGFloat)radius
+{
+    CGRect rect = CGRectMake(0, 0, img.size.width, img.size.height);
+    UIGraphicsBeginImageContextWithOptions(img.size, false, 0.0);
+    CGContextRef ctr = UIGraphicsGetCurrentContext();    // 设置圆形
+    UIBezierPath* path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(radius, radius)];
+    CGContextAddPath(ctr, path.CGPath);
+    CGContextClip(ctr);
+    [img drawInRect:rect];
+    CGContextDrawPath(ctr, kCGPathFillStroke);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
++ (UIView*)getConrnerRadiusUIView:(CGFloat)radius orgion:(CGPoint)orgion size:(CGSize)size
+{
+    UIView* view = [[UIView alloc]initWithFrame:CGRectMake(orgion.x, orgion.y, size.width, size.height)];
+    view.backgroundColor = [UIColor clearColor];
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0.0);
+    CGContextRef ctr = UIGraphicsGetCurrentContext();    // 设置圆形
+    CGContextMoveToPoint(ctr,0,0);
+    CGContextAddArcToPoint(ctr, size.width, 0, size.width, size.height, radius);
+    
+    CGContextAddArcToPoint(ctr, size.width, size.height, 0, size.height, radius);
+    
+    CGContextAddArcToPoint(ctr, 0, size.height, 0, 0, radius);
+    
+    CGContextAddArcToPoint(ctr, 0, 0, size.width, 0, radius);
+    CGContextDrawPath(ctr, kCGPathFillStroke);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIImageView* img = [[UIImageView alloc]initWithImage:image];
+    [view insertSubview:img atIndex:0];
+    return view;
 }
 
 //number:需要处理的数字， position：保留小数点第几位，

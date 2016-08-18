@@ -13,6 +13,8 @@
 #define DLOG(...) NSLog(__VA_ARGS__)
 #endif
 
+#define DEFAULT_BASE_API_URL_STRING @"http://wx.vchetong.com/index.php"
+
 // 获得屏幕的参数
 #define MAIN_SCREEN_FRAME   [[UIScreen mainScreen] bounds]              //!< 屏幕的Frame
 #define MAIN_SCREEN_SIZE    [[UIScreen mainScreen] bounds].size         //!< 屏幕的Size
@@ -20,7 +22,7 @@
 #define MAIN_SCREEN_WIDTH   [[UIScreen mainScreen] bounds].size.width   //!< 屏幕的Width
 
 // 弱引用
-#define YZWeakSelf(weakSelf) __weak typeof(self) weakSelf = self
+#define WeakSelf(weakSelf) __weak typeof(self) weakSelf = self
 
 //ios版本判断
 #define IS_IOS_7 (([[[[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."] objectAtIndex:0] intValue] >= 7) ? YES : NO)
