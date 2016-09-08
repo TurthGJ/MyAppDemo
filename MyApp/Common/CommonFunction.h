@@ -157,7 +157,7 @@ typedef NS_ENUM(NSInteger, ErrorType) {
 
 
 /**
- *  高效UIView处理
+ *  高效UIView圆角处理
  *
  *  @param view
  *  @param radius

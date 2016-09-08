@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vfx-Od-LSA" customClass="FromCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是测试" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggl-DJ-ncv">
+                        <rect key="frame" x="41" y="159" width="68" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="FromCollectionViewCell" image="zrx4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AYn-ey-U58">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="5g1-cG-Q5L"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="AYn-ey-U58" firstAttribute="leading" secondItem="vfx-Od-LSA" secondAttribute="leading" id="HUm-cf-fKm"/>
+                <constraint firstItem="Ggl-DJ-ncv" firstAttribute="centerX" secondItem="vfx-Od-LSA" secondAttribute="centerX" id="Q06-wD-VXg"/>
+                <constraint firstAttribute="trailing" secondItem="AYn-ey-U58" secondAttribute="trailing" id="YSK-zK-7Iz"/>
+                <constraint firstAttribute="bottom" secondItem="Ggl-DJ-ncv" secondAttribute="bottom" id="klC-Pj-k39"/>
+                <constraint firstItem="AYn-ey-U58" firstAttribute="top" secondItem="vfx-Od-LSA" secondAttribute="top" id="xeR-ce-hMc"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="AYn-ey-U58" id="L99-0K-FEJ"/>
+            </connections>
+            <point key="canvasLocation" x="268" y="246"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="zrx4.jpg" width="650" height="650"/>
+    </resources>
+</document>
