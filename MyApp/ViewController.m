@@ -21,8 +21,10 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+        
     CollectionMoveLayout* layout = [[CollectionMoveLayout alloc]init];
     layout.delegate = self;
     layout.minimumInteritemSpacing = 10;
@@ -32,6 +34,7 @@
     //    layout.footerReferenceSize = CGSizeMake(SCREEN_WIDTH, 0.f);
     //    [layout setSectionInset:UIEdgeInsetsMake(0, 0,20,0)];
     
+
     
     _myCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, MAIN_SCREEN_WIDTH, MAIN_SCREEN_HEIGHT) collectionViewLayout:layout];
     _myCollectionView.delegate = self;

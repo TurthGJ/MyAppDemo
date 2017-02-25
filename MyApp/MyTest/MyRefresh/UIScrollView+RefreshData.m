@@ -22,6 +22,8 @@ static const char RefreshFooterKey = '\0';
         
         [self insertSubview:headView atIndex:0];
         
+        
+        
         objc_setAssociatedObject(self, &RefreshHeaderKey, headView, OBJC_ASSOCIATION_ASSIGN);
     }
 }

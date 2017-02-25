@@ -10,6 +10,8 @@
 #import <UIKIT/UIkit.h>
 #import "sys/utsname.h"
 #import <MBProgressHUD.h>
+#import <CoreFoundation/CoreFoundation.h>
+#import <ImageIO/ImageIO.h>
 
 typedef NS_ENUM(NSInteger, ErrorType) {
     // 错误的类型
@@ -18,6 +20,21 @@ typedef NS_ENUM(NSInteger, ErrorType) {
     Error_LoginFaile           = 101,   //登录失败
     Error_RegisterFaile        = 102    //注册失败
     //TODO 增加
+};
+
+typedef NS_ENUM(NSInteger,ImageType){
+    ImageType_Unkown,
+    ImageType_TIFF,
+    ImageType_ICO,
+    ImageType_CUR,
+    ImageType_ICNS,
+    ImageType_GIF,
+    ImageType_PNG,
+    ImageType_WEBP,
+    ImageType_BMP,
+    ImageType_JPEG2000,
+    ImageType_JPG,
+    ImageType_JP2
 };
 
 @interface CommonFunction : NSObject
@@ -285,6 +302,15 @@ typedef NS_ENUM(NSInteger, ErrorType) {
  *  @return 首字母
  */
 + (NSString *)firstCharactor:(NSString *)aString;
+
+
+/**
+ 获取图片类型
+
+ @param data
+ @return 
+ */
++ (ImageType)imageDetectType:(CFDataRef)data;
 
 
 //测试后台定位

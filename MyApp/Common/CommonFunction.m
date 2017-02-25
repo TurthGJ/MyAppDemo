@@ -16,6 +16,9 @@
 #include <net/if_dl.h>
 #import "UIImage+Gray.h"
 
+#define MY_FOUR_CC(c1,c2,c3,c4) ((UInt32)(((c4) << 24)|((c3) << 16)|((c2) << 8)|(c1)))
+#define MY_TWO_CC(c1,c2) ((UInt16)(((c2) << 8)|(c1)))
+
 @implementation CommonFunction
 
 + (NSString *)deviceString
@@ -861,6 +864,80 @@
             [cacheData writeToFile:filePath atomically:YES];
         });
     }
+}
+
+
++ (ImageType)imageDetectType:(CFDataRef)data
+{
+    if (!data) {
+        return ImageType_Unkown;
+    }
+    UInt64 length = CFDataGetLength(data);
+    if (length < 16) {
+        return ImageType_Unkown;
+    }
+    const char* bytes = (char*)CFDataGetBytePtr(data);
+    UInt32 magic4 = *((UInt32*)bytes);
+    switch (magic4) {
+        case MY_FOUR_CC(0x4D, 0x4D, 0x00, 0x2A):
+        {
+            return ImageType_TIFF;
+        }break;
+        case MY_FOUR_CC(0x49, 0x49, 0x2A, 0x00):
+        {
+            return ImageType_TIFF;
+        }break;
+        case MY_FOUR_CC(0x00, 0x00, 0x01, 0x00):
+        {
+            return ImageType_ICO;
+        }break;
+        case MY_FOUR_CC(0x00, 0x00, 0x02, 0x00):
+        {
+            return ImageType_CUR;
+        }break;
+        case MY_FOUR_CC('i', 'c', 'n', 's'):
+        {
+            return ImageType_ICNS;
+        }break;
+        case MY_FOUR_CC('G', 'I', 'F', '8'):
+        {
+            return ImageType_GIF;
+        }
+        case MY_FOUR_CC(0x89, 'P', 'N', 'G'):
+        {
+            return ImageType_PNG;
+        }break;
+        case MY_FOUR_CC('R', 'I', 'F', 'F'):
+        {
+            UInt32 tmp = *((UInt32*)(bytes+8));
+            if (tmp == MY_FOUR_CC('W', 'E', 'B', 'P')) {
+                return ImageType_WEBP;
+            }
+        }break;
+    }
+    UInt16 magic2 = *((UInt16*)bytes);
+    switch (magic2) {
+        case MY_TWO_CC('B', 'A'):
+        case MY_TWO_CC('B', 'M'):
+        case MY_TWO_CC('I', 'C'):
+        case MY_TWO_CC('P', 'I'):
+        case MY_TWO_CC('C', 'I'):
+        case MY_TWO_CC('C', 'P'):
+        {
+            return ImageType_BMP;
+        }break;
+        case MY_TWO_CC(0xFF, 0x4F):
+        {
+            return ImageType_JPEG2000;
+        }break;
+    }
+    if (memcmp(bytes, "\377\330\377", 3) == 0) {
+        return ImageType_JPG;
+    }
+    if (memcmp(bytes+4, "\152\120\040\040\015", 5) == 0) {
+        return ImageType_JPEG2000;
+    }
+    return ImageType_Unkown;
 }
 
 @end

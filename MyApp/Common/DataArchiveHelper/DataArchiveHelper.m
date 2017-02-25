@@ -23,6 +23,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[DataArchiveHelper alloc]init];
+        [instance unarchiveData];
     });
     return instance;
 }
