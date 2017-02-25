@@ -306,21 +306,12 @@
 		2706BEF11D337907003977CA /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
-				27337B311DB8C688004175F2 /* MyApp.entitlements */,
-				27B34E291D792D370041727F /* zrx4.jpg */,
-				27D33F751D7D70E20063A3A2 /* 回响.mp3 */,
+				2778F2441E61B53C0007CE3B /* Resource */,
 				279B44CB1D45FED500BBE1EF /* MyTest */,
 				2706BF251D337A04003977CA /* Common */,
 				2706BEF51D337907003977CA /* AppDelegate.h */,
 				2706BEF61D337907003977CA /* AppDelegate.m */,
-				2706BEF81D337907003977CA /* ViewController.h */,
-				2706BEF91D337907003977CA /* ViewController.m */,
-				27B3343F1D6D4AB800555D90 /* MyAppTestViewController.h */,
-				27B334401D6D4AB800555D90 /* MyAppTestViewController.m */,
-				2706BEFB1D337907003977CA /* Main.storyboard */,
-				2706BEFE1D337907003977CA /* Assets.xcassets */,
-				2706BF001D337907003977CA /* LaunchScreen.storyboard */,
-				2706BF031D337907003977CA /* Info.plist */,
+				2778F2451E61B55C0007CE3B /* ViewController */,
 				2706BEF21D337907003977CA /* Supporting Files */,
 				270DEC6C1D8E781200F592B2 /* Model.xcdatamodeld */,
 			);
@@ -330,6 +321,8 @@
 		2706BEF21D337907003977CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2706BF031D337907003977CA /* Info.plist */,
+				27337B311DB8C688004175F2 /* MyApp.entitlements */,
 				2706BEF31D337907003977CA /* main.m */,
 			);
 			name = "Supporting Files";
@@ -610,6 +603,29 @@
 				274661081D751B900009A8F8 /* DataUserDefaultsHelper.m */,
 			);
 			path = DataArchiveHelper;
+			sourceTree = "<group>";
+		};
+		2778F2441E61B53C0007CE3B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2706BEFB1D337907003977CA /* Main.storyboard */,
+				2706BEFE1D337907003977CA /* Assets.xcassets */,
+				2706BF001D337907003977CA /* LaunchScreen.storyboard */,
+				27B34E291D792D370041727F /* zrx4.jpg */,
+				27D33F751D7D70E20063A3A2 /* 回响.mp3 */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		2778F2451E61B55C0007CE3B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2706BEF81D337907003977CA /* ViewController.h */,
+				2706BEF91D337907003977CA /* ViewController.m */,
+				27B3343F1D6D4AB800555D90 /* MyAppTestViewController.h */,
+				27B334401D6D4AB800555D90 /* MyAppTestViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		279B44CB1D45FED500BBE1EF /* MyTest */ = {
