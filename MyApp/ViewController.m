@@ -33,7 +33,11 @@
     layout.headerReferenceSize = CGSizeMake(MAIN_SCREEN_WIDTH, 40.f);
     //    layout.footerReferenceSize = CGSizeMake(SCREEN_WIDTH, 0.f);
     //    [layout setSectionInset:UIEdgeInsetsMake(0, 0,20,0)];
+    NSString* str = [@"abc" copy];
+    NSArray* array = [NSArray arrayWithObject:str];
+    [array autorelease];
     
+    NSLog(@"%lu",(unsigned long)[str retainCount]);
 
     
     _myCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, MAIN_SCREEN_WIDTH, MAIN_SCREEN_HEIGHT) collectionViewLayout:layout];
